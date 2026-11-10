@@ -1,16 +1,120 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React Mini Games
 
-Currently, two official plugins are available:
+A collection of two interactive games — **Memory Match** and **Hangman** — built using React, JavaScript, and CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project focuses on React state management, event handling, conditional rendering, accessibility, and responsive UI design.
 
-## React Compiler
+## Games
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Memory Match
 
-## Expanding the ESLint configuration
+A card-matching game where players flip two cards at a time to find matching pairs.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**Features**
+- Randomized cards using the Fisher–Yates shuffle algorithm
+- Two-card flip and matching logic
+- Automatic reset of unmatched cards after a short delay
+- Prevention of additional card selections during comparison
+- Win detection when all pairs are matched
+- Restart functionality
+
+### 2. Hangman
+
+A word-guessing game where players must identify a hidden word within six incorrect attempts.
+
+**Features**
+- Random word selection from a predefined list
+- Interactive alphabet keyboard
+- Automatic reveal of correctly guessed letters
+- Progressive Hangman drawing for incorrect guesses
+- Win and loss detection
+- Restart functionality
+
+## Tech Stack
+
+- React
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- Vite
+
+## Accessibility
+
+Both games include accessibility considerations such as:
+
+- Semantic HTML elements
+- Keyboard-accessible controls
+- Descriptive ARIA labels
+- Screen-reader-friendly game status messages
+- Disabled states for unavailable interactions
+- Visible keyboard focus indicators
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/akilasankaran/react-mini-games.git
+```
+
+Navigate to the project:
+
+```bash
+cd react-mini-games
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the local URL displayed in your terminal.
+
+## Project Structure
+
+```text
+src/
+├── components/
+│   ├── MemoryGame/
+│   │   ├── MemoryGame.jsx
+│   │   └── MemoryGame.css
+│   └── Hangman/
+│       ├── Hangman.jsx
+│       └── Hangman.css
+├── App.jsx
+├── App.css
+├── index.css
+└── main.jsx
+```
+
+## Key Concepts Practised
+
+- React Hooks (`useState`, `useEffect`)
+- State updates and derived state
+- Conditional rendering
+- Event handling
+- Effect cleanup and timers
+- Array manipulation and randomization
+- Component-based architecture
+- Accessibility and responsive design
+
+## Author
+
+**Akila Sankaran**
+
+GitHub: https://github.com/akilasankaran
