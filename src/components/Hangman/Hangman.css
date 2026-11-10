@@ -1,0 +1,161 @@
+.hangman-game {
+  text-align: center;
+}
+
+.hangman-drawing {
+  position: relative;
+  width: 200px;
+  height: 230px;
+  margin: 24px auto;
+}
+
+/* Gallows */
+
+.gallows-base {
+  position: absolute;
+  width: 140px;
+  height: 4px;
+  bottom: 0;
+  left: 10px;
+  background: #333;
+}
+
+.gallows-pole {
+  position: absolute;
+  width: 4px;
+  height: 215px;
+  bottom: 0;
+  left: 35px;
+  background: #333;
+}
+
+.gallows-top {
+  position: absolute;
+  width: 95px;
+  height: 4px;
+  top: 10px;
+  left: 35px;
+  background: #333;
+}
+
+.gallows-rope {
+  position: absolute;
+  width: 4px;
+  height: 25px;
+  top: 10px;
+  left: 126px;
+  background: #333;
+}
+
+/* Body parts */
+
+.head {
+  position: absolute;
+  top: 35px;
+  left: 108px;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333;
+  border-radius: 50%;
+}
+
+.body {
+  position: absolute;
+  top: 75px;
+  left: 126px;
+  width: 4px;
+  height: 65px;
+  background: #333;
+}
+
+.arm,
+.leg {
+  position: absolute;
+  width: 4px;
+  background: #333;
+  transform-origin: top center;
+}
+
+.arm {
+  top: 90px;
+  left: 127px;
+  height: 48px;
+  transform: rotate(45deg);
+}
+
+.arm.right {
+  transform: rotate(-45deg);
+}
+
+.leg {
+  top: 140px;
+  left: 127px;
+  height: 55px;
+  transform: rotate(30deg);
+}
+
+.leg.right {
+  transform: rotate(-30deg);
+}
+
+/* Word */
+
+.word-display {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+
+.word-display > span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 42px;
+  border-bottom: 2px solid #333;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* Keyboard */
+
+.alphabet-keyboard {
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 8px;
+  max-width: 540px;
+  margin: 24px auto;
+}
+
+.alphabet-keyboard button {
+  min-width: 0;
+  min-height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #f3f4f6;
+  color: #222;
+  cursor: pointer;
+}
+
+.alphabet-keyboard button.correct {
+  background: #dcfce7;
+  border-color: #16a34a;
+}
+
+.alphabet-keyboard button.incorrect {
+  background: #fee2e2;
+  border-color: #dc2626;
+}
+
+.alphabet-keyboard button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .alphabet-keyboard {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}

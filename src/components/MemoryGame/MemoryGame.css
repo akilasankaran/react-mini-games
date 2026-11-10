@@ -1,0 +1,61 @@
+.memory-game {
+  text-align: center;
+}
+
+.memory-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: 600px;
+  margin: 24px auto;
+}
+
+.memory-board {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.memory-board .number {
+  aspect-ratio: 1;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #e5e7eb;
+  color: #222;
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.memory-board .number.flipped {
+  background: #dbeafe;
+  border-color: #2563eb;
+}
+
+.memory-board .number:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.memory-board .number:hover:not(:disabled) {
+  background: #d1d5db;
+}
+
+.game-message {
+  min-height: 24px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .memory-board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .memory-actions {
+    flex-direction: column;
+  }
+}
